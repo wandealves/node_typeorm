@@ -6,9 +6,9 @@
   "username": "postgres",
   "password": "docker",
   "database": "baseOrm",
-  "entities": ["./src/models/*.ts"],
+  "entities": ["./src/models/**/*.ts"],
   "migrations": ["./src/migrations/*.ts"],
   "cli": {
-    "migrationsDir": "./src/shared/infra/typeorm/migrations/"
+    "migrationsDir": "./src/migrations/"
   }
 }]

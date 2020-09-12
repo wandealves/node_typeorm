@@ -11,11 +11,15 @@
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
+    "@overnightjs/core": "^1.7.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "pg": "^8.3.3",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.26"
   },
   "devDependencies": {
+    "@types/express": "^4.17.8",
     "@types/node": "^14.10.1",
     "ts-node-dev": "^1.0.0-pre.62",
     "tsconfig-paths": "^3.9.0",
