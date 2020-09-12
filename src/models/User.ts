@@ -5,17 +5,20 @@ import {
   OneToOne,
   JoinColumn
 } from "typeorm";
-import { Profile } from "./Profile";
+import Profile from "./Profile";
 
-@Entity()
-export class User {
-  @PrimaryGeneratedColumn()
-  id: number;
+@Entity("users")
+export default class User {
+  @PrimaryGeneratedColumn("uuid")
+  id: string;
 
   @Column()
   name: string;
 
+  @Column()
+  profile_id: string;
+
   @OneToOne(type => Profile)
-  @JoinColumn()
+  @JoinColumn({ name: "profile_id" })
   profile: Profile;
 }

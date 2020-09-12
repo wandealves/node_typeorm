@@ -1,9 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
-@Entity()
-export class Profile {
-  @PrimaryGeneratedColumn()
-  id: number;
+@Entity("profiles")
+export default class Profile {
+  @PrimaryGeneratedColumn("uuid")
+  id: string;
 
   @Column()
   gender: string;
